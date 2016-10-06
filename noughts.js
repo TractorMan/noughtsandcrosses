@@ -62,7 +62,7 @@ var switchColor = function(){
 	if(noughts.mode =="cpu"&&noughts.turn =="player"){
 			
 			noughts.turn="cpu";
-			cpuPlay();
+			setTimeout(cpuPlay,100);
 			
 	};
 	
@@ -81,16 +81,14 @@ var playerPlay = function () {
 				noughts.turns++;
 				if(checkWin(noughts[noughts.color])){
 					
-					alert(checkWin(noughts[noughts.color]));
-					
-					drawBoard();
-					playerPlay();
-					reset();
+					setTimeout(function(){alert(checkWin(noughts[noughts.color]));
+					reset()},100)
+					return;
 					
 				}
 				
-					noughts.turn="player"
-					
+				
+				noughts.turn="player";
 				
 				switchColor();
 			
@@ -104,7 +102,8 @@ var playerPlay = function () {
 };
 
 var reset = function(){
-	
+	drawBoard();
+	playerPlay();
 	noughts.blue=[];
 	noughts.red=[];
 	noughts.turns=0;
@@ -135,8 +134,8 @@ var cpuPlay = function(){
 		if(checkWin(noughts[color])){
 			
 			alert(checkWin(noughts[color]));
+		
 			reset();
-			main();
 			
 		}
 		
