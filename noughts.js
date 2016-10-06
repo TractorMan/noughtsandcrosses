@@ -163,7 +163,19 @@ var checkWin = function(arr){
 };
 
 
-
+var switchSwitch = function(){
+	
+	
+	$(".switch").click(function(){
+		
+		$(this).toggleClass("left right")
+		
+		
+	})
+	
+	
+	
+};
 
 
 var main = function(){
@@ -171,6 +183,7 @@ var main = function(){
 	
 	playerPlay();
 	buttonPress();
+	switchSwitch ();
 
 };
 

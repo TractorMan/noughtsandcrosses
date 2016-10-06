@@ -44,3 +44,29 @@
 	border-style: solid;
 }
 
+
+.switch, .one, .two{
+	
+	display: inline-block;
+	
+}
+
+.switch{
+	height: 3rem;
+	width: 8rem;
+	
+	
+	
+}
+
+.left{
+	
+	background-image: url("switch1.png");
+	background-repeat: no-repeat;
+}
+
+.right{
+	
+	background-image: url("switch2.png");
+	background-repeat: no-repeat;
+}
