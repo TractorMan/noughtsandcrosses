@@ -44,11 +44,35 @@
 	border-style: solid;
 }
 
+.box{
+	margin-top: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30rem;
+}
 
 .switch, .one, .two{
 	
 	display: inline-block;
 	
+}
+
+
+.one, .two{
+	
+	
+	vertical-align: 1rem;
+	margin-right: 1rem;
+	
+}
+.one{
+	
+	margin-left: 5rem;
+	
+}
+.two{
+	
+	margin-left: 1rem;
 }
 
 .switch{

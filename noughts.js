@@ -169,7 +169,7 @@ var switchSwitch = function(){
 	$(".switch").click(function(){
 		
 		$(this).toggleClass("left right")
-		
+		switchMode();
 		
 	})
 	
