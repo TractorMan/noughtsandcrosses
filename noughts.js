@@ -1,7 +1,7 @@
 var noughts = {
 
 
-	color: "blue",
+	color: "red",
 	arrWin: [["1", "2" ,"3"],["4", "5", "6"], ["7", "8", "9"], ["1", "4", "7"],["2", "5", "8"], ["3", "6", "9"], ["1", "5", "9"], ["3", "5", "7"]], //stores the winning positions
 	blue: [], //stores blue positions
 	red: [], //stores red positions
@@ -166,13 +166,21 @@ var checkWin = function(arr){
 var switchSwitch = function(){
 	
 	
-	$(".switch").click(function(){
+	$(".mode").click(function(){
 		
 		$(this).toggleClass("left right")
 		switchMode();
 		
 	})
 	
+	$(".color").click(function(){
+		
+		$(this).toggleClass("left right")
+		if (noughts.color=="red") noughts.color = "blue";
+		else noughts.color = "red";
+		reset();
+		
+	})
 	
 	
 };
